@@ -2,7 +2,7 @@
 layout: home
 permalink: index.html
 
-repository-name: e20-co225-Computer-Engineering-Portal
+repository-name: e20-co227-Computer-Engineering-Portal
 title: Computer Engineering Portal
 ---
 
