@@ -1,83 +1,54 @@
 ___
-# Computer Engineering Portal
+# portal.ce.pdn.ac.lk
 ___
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Content Management](#content-management)
-3. [Course Management](#course-management)
-4. [Taxonomy Integration](#taxonomy-integration)
-___
+Internal and Public web service provider of the Department of Computer Engineering
 
-## Introduction
+## instructions
+Your environment should have
++ WAMP or XAMP server
++ [Node.js](https://nodejs.org/en) 
++ [composer](https://getcomposer.org/download/)
 
-The Computer Engineering Portal serves as both the internal and public web service platform for the Department of Computer Engineering, University of Peradeniya. This project includes content management(News and events),  course management and taxonomy integration.The portal is developed using Laravel framework and is hosted on portal.ce.pdn.ac.lk. 
+Create a database to use for the project. You can use phpmyadmin or any other database management tool.<br>
 
-## Content Management
-
-News, Events, Seminars which are published on department website are managed through this portal. 
-
-### News
-- For the all news, visit: [portal.ce.pdn.ac.lk/api/news/v1](http://portal.ce.pdn.ac.lk/api/news/v1)
-- Search by id: [portal.ce.pdn.ac.lk/api/news/v1/{id}](http://portal.ce.pdn.ac.lk/api/news/v1/{id})
-
-### Events
-- For all events, visit: [portal.ce.pdn.ac.lk/api/events/v1](http://portal.ce.pdn.ac.lk/api/events/v1)
-- Upcoming events: [portal.ce.pdn.ac.lk/api/events/v1/upcoming](http://portal.ce.pdn.ac.lk/api/events/v1/upcoming)
-- Past events: [portal.ce.pdn.ac.lk/api/events/v1/past](http://portal.ce.pdn.ac.lk/api/events/v1/past)
-- Search by id: [portal.ce.pdn.ac.lk/api/events/v1/{id}](http://portal.ce.pdn.ac.lk/api/events/v1/{id})
-
-## Content Management System
-
-Course details are published on department website.This portal is used to manage the course details.Both undergraduate and postgraduate courses are managed through this portal.
-
-- Undergraduate courses: [portal.ce.pdn.ac.lk/api/academic/v1/undergraduate/courses](http://portal.ce.pdn.ac.lk/api/academic/v1/undergraduate/courses)
-- Undergraduate semesters: [portal.ce.pdn.ac.lk/api/academic/v1/undergraduate/semesters](http://portal.ce.pdn.ac.lk/api/academic/v1/undergraduate/semesters)
-
-## Taxonomy Integration
-
-This portal is used to manage taxonomies. Taxonomies are used to categorize various content.Here is some of the taxonomies used in this portal.
-
-```CEIntranet
-├── For Students
-│   ├── Academic Calendar
-│   ├── Timetables
-│   ├── Examination Schedules
-│   ├── Academic Calendar
-│   └── Advisor-Advisee
-│
-└── For Staff
-    ├── Exam Claim Application
-    ├── Examination Progress
-    ├── Work Allocation
-    └── Department Meeting Minutes
+Now install pnpm using npm.
+```bash
+npm install -g pnpm
 ```
 
-CEIntranet has property as Link. so every taxonomy term created in CEIntranet Should have a Link.
-
-```Students
-├── Undergraduate Students
-│   ├── E20
-│   ├── E19
-│   └── E18
-│
-├── Postgraduate Students
-│
-└── Alumni Students
-    ├── E17
-    ├── E16
-    ├── E15
-    ├── E14
-    ├── E13
-    ├── E12
-    └── E11
+### Initializing submodule
+```bash
+git submodule init
+git submodule update
 ```
 
-Student taxonomy has these properties
+### Setup for the first run
 
-- Academic Start Date: Date when the academic period begins
-- Academic End Date: Date when the academic period ends
-- Profiles Page: URL to the student profiles
-- Notes: Additional information about the batch
+```bash
+ cd portal.ce.pdn.ac.lk
+ cp .env.example .env
+```
+now change the database credentials in .env file.
 
-So every taxonomy term created in Students Should have these properties.
+add webpack and webpack-cli to pnpm.
+```bash
+pnpm add webpack webpack-cli --save-dev
+```
+install the dependencies, build assets and run the migrations.
+```bash
+./scripts/setup.sh
+```
+Now serve the site.
+```bash
+php artisan serve
+```
+
+Use user credintials inside .env file to login to the website.<br>
+furthur details visit official git repository of this project.https://github.com/cepdnaclk/portal.ce.pdn.ac.lk
+
+## Team of Developers
+-  E/20/087: Supun Dulara, [e20087@eng.pdn.ac.lk](mailto:e20087@eng.pdn.ac.lk)
+-  E/20/094: Ishara Ekanayaka, [e20094@eng.pdn.ac.lk](mailto:e20094@eng.pdn.ac.lk)
+-  E/20/131: S.T.S Hasantha, [e20131@eng.pdn.ac.lk](mailto:e20131@eng.pdn.ac.lk)
+-  E/20/179: Kusal Jayawardhana, [e20179@engdn.ac.lk](mailto:e20179@engdn.ac.lk)
