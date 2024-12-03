@@ -14,7 +14,7 @@ title: Computer Engineering Portal
 -  E/20/087: Supun Dulara, [e20087@eng.pdn.ac.lk](mailto:e20087@eng.pdn.ac.lk)
 -  E/20/094: Ishara Ekanayaka, [e20094@eng.pdn.ac.lk](mailto:e20094@eng.pdn.ac.lk)
 -  E/20/131: S.T.S Hasantha, [e20131@eng.pdn.ac.lk](mailto:e20131@eng.pdn.ac.lk)
--  E/20/179: Kusal Jayawardhana, [e20179@engdn.ac.lk](mailto:e20179@engdn.ac.lk)
+-  E/20/179: Kusal Jayawardhana, [e20179@eng.pdn.ac.lk](mailto:e20179@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -70,7 +70,7 @@ CEIntranet
     └── Department Meeting Minutes
 ```
 
-CEIntranet has property as Link. so every taxonomy term created in CEIntranet Should have a Link.
+CEIntranet has property as link. So every taxonomy term created in CEIntranet should have a link.
 
 ```
 Students
@@ -98,7 +98,7 @@ Student taxonomy has these properties
 - Profiles Page: URL to the student profiles
 - Notes: Additional information about the batch
 
-So every taxonomy term created in Students Should have these properties.
+So every taxonomy term created in Students should have these properties.
 
 ## Links
 
