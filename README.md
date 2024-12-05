@@ -6,7 +6,7 @@ Internal and Public web service provider of the Department of Computer Engineeri
 
 ## instructions
 Your environment should have
-+ WAMP or XAMP server
++ WampServer or [XAMPP](https://www.apachefriends.org/download.html)
 + [Node.js](https://nodejs.org/en) 
 + [composer](https://getcomposer.org/download/)
 
